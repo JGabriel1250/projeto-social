@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;    /* a viewport do iframe vira 471px */
+            width: 100%;      /* nunca use vh na largura */
+            overflow: hidden; /* se não quiser rolagem na home */
         }
 
         body {
-            height: 100vh;
-            width: 100vh;
-            background: black url('../imagens/tela-home.jpg') no-repeat top center;
+            background: black url('imagens/tela-home.jpg') no-repeat top center;
             background-size: cover;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
         }
     </style>
 </head>
